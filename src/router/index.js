@@ -7,6 +7,7 @@ import seller from '../pages/seller/seller.vue'
 Vue.use(VueRouter)
 
 export default new VueRouter({
+  mode: 'history',
   routes: [
     {
       path: '/',
