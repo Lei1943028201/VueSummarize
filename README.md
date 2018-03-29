@@ -1,47 +1,47 @@
 #目录结构说明
-├─build
-│   ├─build.js
-│   ├─check-versions.js
-│   ├─dev-client.js
-│   ├─dev-server.js
-│   ├─utils.js
-│   ├─vue-loader.conf.js
-│   ├─webpack.base.conf.js
-│   ├─webpack.dev.conf.js
-│   ├─webpack.prod.conf.js
-│   └─webpack.test.conf.js
-├─config
-│   ├─dev.env.js
-│   ├─index.js
-│   ├─prod.env.js
-│   └─test.env.js
-├─dist	项目打包文件
-├─src	项目源码文件
-│   ├─common		公共代码库
-│   ├─components	非路由组件库
-│   ├─page			路由组件库
-│   ├─router		路由
-│   │  └─index.js
-│   ├─store			vuex文件夹
-│	│  ├─action.js
-│	│  ├─getters.js
-│	│  ├─index.js
-│	│  ├─mutation-types.js
-│	│  ├─mutations.js
-│   │  └─state.js		
-│   ├─app.vue
-│   └─main.js		
-├─.babelrc
-├─.editorconfig
-├─.eslintignore
-├─.eslintrc.js
-├─.gitignore
-├─.postcssrc.js
-├─README.md
-├─index.html
-├─server.js
-├─package-lock.json
-└─package.json
+	├─build
+	│   ├─build.js
+	│   ├─check-versions.js
+	│   ├─dev-client.js
+	│   ├─dev-server.js
+	│   ├─utils.js
+	│   ├─vue-loader.conf.js
+	│   ├─webpack.base.conf.js
+	│   ├─webpack.dev.conf.js
+	│   ├─webpack.prod.conf.js
+	│   └─webpack.test.conf.js
+	├─config
+	│   ├─dev.env.js
+	│   ├─index.js
+	│   ├─prod.env.js
+	│   └─test.env.js
+	├─dist	项目打包文件
+	├─src	项目源码文件
+	│   ├─common		公共代码库
+	│   ├─components	非路由组件库
+	│   ├─page			路由组件库
+	│   ├─router		路由
+	│   │  └─index.js
+	│   ├─store			vuex文件夹
+	│	│  ├─action.js
+	│	│  ├─getters.js
+	│	│  ├─index.js
+	│	│  ├─mutation-types.js
+	│	│  ├─mutations.js
+	│   │  └─state.js		
+	│   ├─app.vue
+	│   └─main.js		
+	├─.babelrc
+	├─.editorconfig
+	├─.eslintignore
+	├─.eslintrc.js
+	├─.gitignore
+	├─.postcssrc.js
+	├─README.md
+	├─index.html
+	├─server.js
+	├─package-lock.json
+	└─package.json
 # 项目包含的知识点
 ## wabpack
 	通过webpack实现项目的打包压缩，热加载
