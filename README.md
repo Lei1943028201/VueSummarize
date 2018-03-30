@@ -23,7 +23,7 @@
 	│   ├─router		路由
 	│   │  └─index.js
 	│   ├─store			vuex文件夹
-	│	│  ├─action.js
+	│	│  ├─actions.js
 	│	│  ├─getters.js
 	│	│  ├─index.js
 	│	│  ├─mutation-types.js
