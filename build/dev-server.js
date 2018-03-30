@@ -1,4 +1,3 @@
-
 // 检查node和npm版本
 require('./check-versions')()
 // 获取 config/index.js 的默认配置
@@ -16,7 +15,9 @@ var path = require('path')
 var express = require('express')
 // 使用 webpack
 var webpack = require('webpack')
-// 使用 proxyTable
+// http-proxy-middleware是一个express中间件，用于将http请求代理到其他服务器
+// 例：localhost:8080/api/xxx  -->  localhost:3000/api/xxx
+// 这里使用该插件可以将前端开发中涉及到的请求代理到提供服务的后台服务器上，方便与服务器对接
 var proxyMiddleware = require('http-proxy-middleware')
 // 使用 dev 环境的 webpack 配置
 var webpackConfig = require('./webpack.dev.conf')

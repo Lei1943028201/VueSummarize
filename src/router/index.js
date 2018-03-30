@@ -15,15 +15,25 @@ export default new VueRouter({
     },
     {
       path: '/goods',
-      component: goods
+      component: goods,
+      meta: {
+        showFooter: true
+      }
     },
     {
       path: '/ratings',
-      component: ratings
+      component: ratings,
+      meta: {
+        showFooter: true
+      }
     },
     {
       path: '/seller',
-      component: seller
+      component: seller,
+      meta: {
+        showFooter: false
+      },
+
     },
 
   ]
