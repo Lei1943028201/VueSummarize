@@ -1,10 +1,9 @@
 <template>
   <div>
-    <el-button>默认按钮</el-button>
     <ele-header></ele-header>
     <div class="tab" v-show="$route.meta.showFooter">
       <div class="tab-item">
-        <router-link to="/goods">商品</router-link>
+        <router-link to="/goods">商品 <i class="el-icon-loading"></i></router-link>
       </div>
       <div class="tab-item">
         <router-link to="/ratings">评价</router-link>
