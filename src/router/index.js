@@ -1,9 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import goods from '../pages/goods/goods.vue'
-import ratings from '../pages/ratings/ratings.vue'
-import seller from '../pages/seller/seller.vue'
-
+const ElementUI = () => import('../pages/ElementUI/ElementUI')
+const ElementUI2 = () => import('../pages/ElementUI2/ElementUI')
 Vue.use(VueRouter)
 
 export default new VueRouter({
@@ -11,30 +9,21 @@ export default new VueRouter({
   routes: [
     {
       path: '/',
-      'redirect': '/goods'
+      'redirect': '/elementUI'
     },
     {
-      path: '/goods',
-      component: goods,
+      path: '/elementUI',
+      component: ElementUI,
       meta: {
         showFooter: true
       }
     },
     {
-      path: '/ratings',
-      component: ratings,
-      meta: {
-        showFooter: true
-      }
-    },
-    {
-      path: '/seller',
-      component: seller,
+      path: '/elementUI2',
+      component: ElementUI2,
       meta: {
         showFooter: false
-      },
-
+      }
     },
-
   ]
 })

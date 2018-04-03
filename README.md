@@ -28,9 +28,9 @@
 	│	│  ├─index.js
 	│	│  ├─mutation-types.js
 	│	│  ├─mutations.js
-	│   │  └─state.js		
+	│   │  └─state.js
 	│   ├─app.vue
-	│   └─main.js		
+	│   └─main.js
 	├─.babelrc
 	├─.editorconfig
 	├─.eslintignore
@@ -51,7 +51,8 @@
 	对应用中组件的状态进行集中式的管理(读/写)
 ## vue-router实现路由跳转
 	实现单页面应用的基础
-	结局地址栏路径显示#的问题
+	能够实现路由的懒加载
+	浏览器地址栏路径显示#的问题
 	在路由配置中添加 mode: 'history'
 	例子：
 	export default new Router({
@@ -73,19 +74,19 @@
 	为啥使它？ 因为好使！
 ## 关于npm run build 之后报错的问题
 	你得自己起一个server才能访问这些页面
-	
+
 	例子:
 	在项目的根目录新建一个server.js,代码如下
-	
+
 	var express = require('express')
 	var app = express()
-	
+
 	app.use(express.static('./dist'))
-	
+
 	app.get('/', function (req, res) {
 	  res.send('Hello Vue')
 	})
-	
+
 	app.listen(2333)
 	然后在一个终端里启动这个server: 输入命令 node server.js
 	然后浏览器访问:http://localhost:2333

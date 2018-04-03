@@ -10,9 +10,9 @@
       text-color="#fff"
       active-text-color="#ffd04b">
       <el-submenu index="1">
-        <template slot="title">数据管理</template>
-        <el-menu-item index="goods">数据资源目录</el-menu-item>
-        <el-menu-item index="ratings">质检规则匹配</el-menu-item>
+        <template slot="title">前端UI库</template>
+        <el-menu-item index="elementUI">element-ui</el-menu-item>
+        <el-menu-item index="elementUI2">质检规则匹配</el-menu-item>
         <el-submenu index="1-3">
           <template slot="title">数据比对报告</template>
           <el-menu-item index="1-3-1">动态报告</el-menu-item>
