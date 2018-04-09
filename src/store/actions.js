@@ -14,7 +14,7 @@ import {
 
 export default {
   // 获取商家信息
-  getSeller({commit}) {
+  async getSeller({commit}) {
     // 发送ajax请求, 获取seller数据
     reqSeller().then(response => {
       //获取返回的数据
@@ -28,7 +28,7 @@ export default {
     })
   },
 
-  getHeaderMenu({commit}) {
+  async getHeaderMenu({commit}) {
     // 发送ajax请求, 获取seller数据
     reqHeaderMenu().then(response => {
       //获取返回的数据

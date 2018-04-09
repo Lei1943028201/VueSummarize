@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="fd-warp">
     <fd-header v-show="$route.meta.showFooter"/>
     <router-view/>
   </div>
@@ -25,6 +25,7 @@
   body
     overflow auto
     padding-top 61px
-  h2
-    height 1000px
+  #fd-warp
+    height: 100%
+    min-height 100%
 </style>
