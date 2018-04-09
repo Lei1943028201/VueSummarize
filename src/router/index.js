@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-const ElementUI = () => import('../pages/ElementUI/ElementUI')
-const ElementUI2 = () => import('../pages/ElementUI2/ElementUI')
+const Home = () => import('../pages/Home/Home')
+
 Vue.use(VueRouter)
 
 export default new VueRouter({
@@ -9,21 +9,15 @@ export default new VueRouter({
   routes: [
     {
       path: '/',
-      'redirect': '/elementUI'
+      'redirect': '/home'
     },
     {
-      path: '/elementUI',
-      component: ElementUI,
+      path: '/home',
+      component: Home,
       meta: {
         showFooter: true
       }
     },
-    {
-      path: '/elementUI2',
-      component: ElementUI2,
-      meta: {
-        showFooter: false
-      }
-    },
+
   ]
 })
