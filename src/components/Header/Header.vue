@@ -91,10 +91,11 @@
         top 0
         width 100%
         min-width 1366px
-    .el-menu--horizontal>h1
-        margin-right 30px
-        float right
-        font-size 30px
-        color #fff
-        line-height 61px
+        z-index: 999
+        &>.el-menu--horizontal>h1
+            margin-right 30px
+            float right
+            font-size 30px
+            color #fff
+            line-height 61px
 </style>

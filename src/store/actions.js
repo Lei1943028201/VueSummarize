@@ -3,13 +3,13 @@
  */
 import {
     RESULT_OK,
-    reqSeller,
-    reqHeaderMenu
+    reqHeaderMenu,
+    reqJQuerySelectorData
 } from '../api'
 
 import {
-    RECEIVE_SELLER,
-    RECEIVE_HEADERMENU
+    RECEIVE_HEADERMENU,
+    RECEIVE_JQUERYSELECTORDATA
 } from './mutation-types'
 
 export default {
@@ -24,6 +24,19 @@ export default {
                 console.log('headerMenu',headerMenu)
                 // 提交mutaion请求
                 commit(RECEIVE_HEADERMENU, {headerMenu})
+            }
+        })
+    },
+    async getJQuerySelectorData({commit}) {
+        // 发送ajax请求, 获取seller数据
+        reqJQuerySelectorData().then(response => {
+            //获取返回的数据
+            const result = response.data
+            if(result.code===RESULT_OK) {
+                const jQuerySelectorData = result.data
+                console.log('jQuerySelectorData',jQuerySelectorData)
+                // 提交mutaion请求
+                commit(RECEIVE_JQUERYSELECTORDATA, {jQuerySelectorData})
             }
         })
     },

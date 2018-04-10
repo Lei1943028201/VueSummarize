@@ -1,7 +1,9 @@
 <template>
     <div id="fd-warp">
         <fd-header v-show="$route.meta.showFooter"/>
-        <router-view/>
+        <main>
+            <router-view/>
+        </main>
     </div>
 </template>
 
@@ -16,16 +18,18 @@
 
 <style lang="stylus" rel="stylesheet/stylus">
     html,body
-        box-sizing border-box
         width 100%
         height 100%
         min-width 1366px
-        min-height 100%
-        background-image: linear-gradient(to top, #209cff 0%, #68e0cf 100%);
-    body
-        overflow auto
-        padding-top 61px
+        min-height 768px
     #fd-warp
+        width 100%
         height: 100%
         min-height 100%
+    main
+        box-sizing border-box
+        height 100%
+        min-height 100%
+        padding-top 61px
+        background-image: linear-gradient(to top, #209cff 0%, #68e0cf 100%);
 </style>
