@@ -11,8 +11,8 @@ import ElementUI from 'element-ui'
 
 Vue.use(ElementUI)
 new Vue({
-  el: '#app',
-  render: h => h(App),
-  router,
-  store
+    el: '#app',
+    render: h => h(App),
+    router,
+    store
 })
