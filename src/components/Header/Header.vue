@@ -1,11 +1,9 @@
 <template>
     <div id="el-menu-warp">
         <el-menu
-            :default-active="activeIndex2"
             class="el-menu-demo"
             mode="horizontal"
             router
-            @select="handleSelect"
             :unique-opened = "true"
             background-color="#545c64"
             text-color="#fff"
@@ -73,14 +71,11 @@
     export default {
         data() {
             return {
-                activeIndex: '1',
-                activeIndex2: '1'
+
             };
         },
         methods: {
-            handleSelect(key, keyPath) {
-                console.log(key, keyPath);
-            }
+
         }
     }
 </script>

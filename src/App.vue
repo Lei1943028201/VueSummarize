@@ -30,6 +30,6 @@
         box-sizing border-box
         height 100%
         min-height 100%
-        padding-top 61px
+        padding-top 61.8px
         background-image: linear-gradient(to top, #209cff 0%, #68e0cf 100%);
 </style>

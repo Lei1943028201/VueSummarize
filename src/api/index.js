@@ -4,11 +4,8 @@
 import axios from 'axios'
 
 
-export const RESULT_OK = 0
+export const RESULT_OK = 200
 
 export function reqJQuerySelectorData() { // 返回是promise对象
-    return axios.get('/api/reqJQuerySelectorData')
-}
-export function reqHeaderMenu() { // 返回是promise对象
-    return axios.get('/api/headerMenu')
+    return axios.get('/api/jQuerySelectorData')
 }

@@ -39,7 +39,7 @@
 <style lang="stylus" rel="stylesheet/stylus">
     .jQuery-definition-and-characteristics-warp
         overflow auto
-        width 100%
+        width 99%
         max-height 668px
         background: #ddd
         &>.box-card

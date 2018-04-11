@@ -1,101 +1,42 @@
 <template>
-    <el-table
-            :data="tableData3"
-            border
-            height="580"
-            style="width: 100%">
-        <el-table-column
-                prop="date"
-                label="选择器"
-                width="180">
-        </el-table-column>
-        <el-table-column
-                prop="name"
-                label="实例"
-                width="180">
-        </el-table-column>
-        <el-table-column
-                prop="address"
-                label="选取">
-        </el-table-column>
-    </el-table>
+    <el-tabs type="border-card" v-if="jQuerySelectorData.success">
+        <el-tab-pane label="基本">
+            <jQuerySelectorTable :data="jQuerySelectorData.basicData"/>
+        </el-tab-pane>
+        <el-tab-pane label="层次">
+            <jQuerySelectorTable :data="jQuerySelectorData.hierarchyData"/>
+        </el-tab-pane>
+        <el-tab-pane label="表单">
+            <jQuerySelectorTable :data="jQuerySelectorData.formData"/>
+        </el-tab-pane>
+        <el-tab-pane label="属性">
+            <jQuerySelectorTable :data="jQuerySelectorData.attributeData"/>
+        </el-tab-pane>
+    </el-tabs>
 </template>
 
 <script>
+    import {mapState} from 'vuex'
+    import jQuerySelectorTable from '../jQuerySelectorTable/jQuerySelectorTable'
     export default {
         data() {
             return {
-                tableData3: [{
-                    date: '2016-05-03',
-                    name: '王小虎',
-                    address: '上海市普陀区金沙江路 1518 弄'
-                }, {
-                    date: '2016-05-02',
-                    name: '王小虎',
-                    address: '上海市普陀区金沙江路 1518 弄'
-                }, {
-                    date: '2016-05-04',
-                    name: '王小虎',
-                    address: '上海市普陀区金沙江路 1518 弄'
-                }, {
-                    date: '2016-05-01',
-                    name: '王小虎',
-                    address: '上海市普陀区金沙江路 1518 弄'
-                }, {
-                    date: '2016-05-08',
-                    name: '王小虎',
-                    address: '上海市普陀区金沙江路 1518 弄'
-                }, {
-                    date: '2016-05-06',
-                    name: '王小虎',
-                    address: '上海市普陀区金沙江路 1518 弄'
-                }, {
-                    date: '2016-05-08',
-                    name: '王小虎',
-                    address: '上海市普陀区金沙江路 1518 弄'
-                }, {
-                    date: '2016-05-08',
-                    name: '王小虎',
-                    address: '上海市普陀区金沙江路 1518 弄'
-                }, {
-                    date: '2016-05-08',
-                    name: '王小虎',
-                    address: '上海市普陀区金沙江路 1518 弄'
-                }, {
-                    date: '2016-05-08',
-                    name: '王小虎',
-                    address: '上海市普陀区金沙江路 1518 弄'
-                }, {
-                    date: '2016-05-08',
-                    name: '王小虎',
-                    address: '上海市普陀区金沙江路 1518 弄'
-                }, {
-                    date: '2016-05-08',
-                    name: '王小虎',
-                    address: '上海市普陀区金沙江路 1518 弄'
-                }, {
-                    date: '2016-05-08',
-                    name: '王小虎',
-                    address: '上海市普陀区金沙江路 1518 弄'
-                }, {
-                    date: '2016-05-08',
-                    name: '王小虎',
-                    address: '上海市普陀区金沙江路 1518 弄'
-                }, {
-                    date: '2016-05-07',
-                    name: '王小虎',
-                    address: '上海市普陀区金沙江路 1518 弄'
-                }]
+
             }
         },
         props: {},
-        components: {},
-        created(){
+        components: {
+            jQuerySelectorTable
+        },
+        created() {
             this.$store.dispatch('getJQuerySelectorData')
         },
-        mounted(){
+        mounted() {
+
         },
-        computed: {},
+        computed: {
+             ...mapState(['jQuerySelectorData'])
+        },
         watch: {},
         methods: {}
     }
@@ -103,5 +44,5 @@
 
 <style lang="stylus" rel="stylesheet/stylus">
     /*.el-table*/
-        /*height 280px*/
+    /*height 280px*/
 </style>
