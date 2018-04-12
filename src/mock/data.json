@@ -45,8 +45,57 @@
           "selector": ":last",
           "example": "$('li:last')",
           "explain": "选取最后一个<li>元素"
+        },
+        {
+          "selector": ":even",
+          "example": "$('li:even')",
+          "explain": "选取所有偶数的<li>元素"
+        },
+        {
+          "selector": ":odd",
+          "example": "$('li:odd')",
+          "explain": "选取所有奇数的<li>元素"
+        },
+        {
+          "selector": ":eq(index)",
+          "example": "$('li:eq(3)')",
+          "explain": "选取第四个<li>元素"
+        },
+        {
+          "selector": ":gt(num)",
+          "example": "$('li:gt(3)')",
+          "explain": "选取index大于3的元素"
+        },
+        {
+          "selector": ":lt(num)",
+          "example": "$('li:lt(3)')",
+          "explain": "选取index小于3的元素"
+        },
+        {
+          "selector": ":empty",
+          "example": "$(':empty')",
+          "explain": "选取所有无子节点的元素"
+        },
+        {
+          "selector": ":hidden",
+          "example": "$('div:hidden')",
+          "explain": "选取所有隐藏的<div>元素"
+        },
+        {
+          "selector": ":not(selecter)",
+          "example": "$('input:not(:empty)')",
+          "explain": "选取不为空的<input>元素"
+        },
+        {
+          "selector": ":contains(text)",
+          "example": "$('p:contanins('猫')')",
+          "explain": "选取包含猫的所有<p>元素"
+        },
+        {
+          "selector": ":visibel",
+          "example": "$('table:visibel')",
+          "explain": "选取所有可见的表格"
         }
-
       ]
     },
     "hierarchyData": {
@@ -65,7 +114,6 @@
         }
       ],
       "data": [
-
         {
           "selector": "空格",
           "example": "$('ul li')",
@@ -105,29 +153,74 @@
       ],
       "data": [
         {
-          "selector": "*",
-          "example": "$('*')",
-          "explain": "选取所有元素"
+          "selector": ":input",
+          "example": "$(':input')",
+          "explain": "选取所有的<input>元素"
         },
         {
-          "selector": "*",
-          "example": "$('*')",
-          "explain": "选取所有元素"
+          "selector": ":text",
+          "example": "$(':text')",
+          "explain": "选取所有的type = text的<input>元素"
         },
         {
-          "selector": "*",
-          "example": "$('*')",
-          "explain": "选取所有元素"
+          "selector": ":password",
+          "example": "$(:password')",
+          "explain": "选取所有type = password的<input>元素"
         },
         {
-          "selector": "*",
-          "example": "$('*')",
-          "explain": "选取所有元素"
+          "selector": ":radio",
+          "example": "$(':radio')",
+          "explain": "选取所有type = radio的<input>元素"
         },
         {
-          "selector": "*",
-          "example": "$('*')",
-          "explain": "选取所有元素"
+          "selector": ":checkbox",
+          "example": "$(':checkbox')",
+          "explain": "选取所有type = checkbox的<input>元素"
+        },
+        {
+          "selector": ":submit",
+          "example": "$(':submit')",
+          "explain": "选取所有type = submit的<input>元素"
+        },
+        {
+          "selector": ":reset",
+          "example": "$(':reset')",
+          "explain": "选取所有type = reset的<input>元素"
+        },
+        {
+          "selector": ":button",
+          "example": "$(':button')",
+          "explain": "选取所有type = button的<input>元素"
+        },
+        {
+          "selector": ":image",
+          "example": "$(':image')",
+          "explain": "选取所有type = image的<input>元素"
+        },
+        {
+          "selector": ":file",
+          "example": "$(':file')",
+          "explain": "选取所有type = file的<input>元素"
+        },
+        {
+          "selector": ":enabled",
+          "example": "$(':enabled')",
+          "explain": "选取所有type = enabled<input>元素"
+        },
+        {
+          "selector": ":disabled",
+          "example": "$(':disabled')",
+          "explain": "选取所有禁用的<input>元素"
+        },
+        {
+          "selector": ":selected",
+          "example": "$(':selected')",
+          "explain": "选取所有被选取<input>元素"
+        },
+        {
+          "selector": ":checked",
+          "example": "$(':checked')",
+          "explain": "选取所有被选中<input>元素"
         }
       ]
     },
@@ -149,24 +242,24 @@
       "data": [
 
         {
-          "selector": "*",
-          "example": "$('*')",
-          "explain": "选取所有元素"
+          "selector": "[attribute]",
+          "example": "$('[href]')",
+          "explain": "选取所有带有href属性的元素"
         },
         {
-          "selector": "*",
-          "example": "$('*')",
-          "explain": "选取所有元素"
+          "selector": "[attribute = value]",
+          "example": "$('[href = '#']')",
+          "explain": "选取所有href属性的值等于 # 的元素"
         },
         {
-          "selector": "*",
-          "example": "$('*')",
-          "explain": "选取所有元素"
+          "selector": "[attribute != value]",
+          "example": "$('[href != '#']')",
+          "explain": "选取href属性的值不等于 # 的元素"
         },
         {
-          "selector": "*",
-          "example": "$('*')",
-          "explain": "选取所有元素"
+          "selector": "[attribute $= value]",
+          "example": "$('[href $= '.jpg']')",
+          "explain": "选取href属性的值以 .jpg 结尾的元素"
         }
       ]
     },
