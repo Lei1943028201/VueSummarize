@@ -9,7 +9,7 @@
             text-color="#fff"
             active-text-color="#ffd04b">
             <h1>前端知识查询库</h1>
-            <el-submenu index="1" disabled>
+            <el-submenu index="1">
                 <template slot="title">前端知识</template>
                 <el-submenu index="1-1">
                     <template slot="title">前端基础</template>
@@ -18,7 +18,7 @@
                     <el-menu-item index="javaScript">JavaScript</el-menu-item>
                 </el-submenu>
             </el-submenu>
-            <el-submenu index="2" disabled>
+            <el-submenu index="2">
                 <template slot="title">前端框架</template>
                 <el-menu-item index="vue">Vue</el-menu-item>
                 <el-menu-item index="react">React</el-menu-item>

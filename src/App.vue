@@ -1,7 +1,7 @@
 <template>
-    <div id="fd-warp">
+    <div id="fd-warp" >
         <fd-header v-show="$route.meta.showFooter"/>
-        <main>
+        <main ref="app">
             <router-view/>
         </main>
     </div>
@@ -12,6 +12,9 @@
         export default {
             components: {
                 'fd-header': header
+            },
+            mounted(){
+                console.log(this.$refs.app.clientHeight);
             }
     }
 </script>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .wrap{
+            position: relative;
+            height: 200px;
+            width:250px;
+            border: 1px solid black;
+            margin: 100px auto;
+            overflow: hidden;
+            background: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+        }
+        .content{
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            float: left;
+            padding-right:10px;
+            box-sizing: border-box;
+            font-size: 13px;
+        }
+        .scrollbar{
+            position: relative;
+            height:100%;
+            width:10px;
+            float: left;
+            background: #ccccff;
+            margin-left: -10px;
+            border-radius: 5px;
+        }
+        .slider{
+            position: absolute;
+            width:10px;
+            height: 15%;
+            background: #444444;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body>
+<!--包裹器-->
+<div class="wrap">
+    <!--内容区-->
+    <div class="content">
+        <h3>《茅屋为秋风所破歌》</h3>
+        作者：杜甫 【唐代】 赏析<br>
+        八月秋高风怒号，卷我屋上三重茅。<br>
+        茅飞渡江洒江郊，高者挂罥长林梢，<br>
+        下者飘转沉塘坳。<br>
+        南村群童欺我老无力，忍能对面为盗贼，<br>
+        公然抱茅入竹去。<br>
+        唇焦口燥呼不得，归来倚杖自叹息。<br>
+        俄顷风定云墨色，秋天漠漠向昏黑。<br>
+        布衾多年冷似铁，娇儿恶卧踏里裂。<br>
+        床头屋漏无干处，雨脚如麻未断绝。<br>
+        自经丧乱少睡眠，长夜沾湿何由彻?<br>
+        安得广厦千万间，大庇天下寒士俱欢颜，<br>
+        风雨不动安如山！<br>
+        呜呼！何时眼前突兀见此屋，吾庐独破受冻死亦足！
+    </div>
+    <!--滚动条-->
+    <div class="scrollbar">
+        <div class="slider"></div>
+    </div>
+</div>
+<script>
+    var wrap = document.getElementsByClassName("wrap")[0];
+    var content = document.getElementsByClassName("content")[0];
+    var slider = document.getElementsByClassName("slider")[0];
+    //初始化变量
+    var eleY = 0;
+    var startY = 0;
+    //动态调节滚动条高度
+    var scale = wrap.clientHeight/content.offsetHeight;
+    slider.style.height = wrap.clientHeight * scale + 'px';
+    slider.onmousedown=function(event){
+        event = event || window.event;
+        eleY = slider.offsetTop;
+        startY = event.clientY;
+        document.onmousemove = function(event){
+            event = event || window.event;
+            //鼠标最终位置
+            var endY = event.clientY;
+            //鼠标距离差
+            var disY = endY - startY;
+            //限定范围
+            var top = eleY + disY;
+            if(top < 0){
+                top = 0;
+            }else if(top >wrap.offsetHeight-slider.offsetHeight){
+                top = wrap.offsetHeight-slider.offsetHeight;
+            }
+            //元素位置确定
+            slider.style.top = top + 'px';
+            //内容区
+            content.style.top = -top/scale + 'px';
+        };
+        document.onmouseup = function(){
+            document.onmousemove = document.onmouseup = null;
+        };
+        return false;
+    };
+    //滚轮事件
+    wrap.onmousewheel = fn;
+    wrap.addEventListener && wrap.addEventListener('DOMMouseScroll',fn);
+    function fn(event){
+        event = event || window.event;
+        var flag = '';
+        var add = 0;
+        if(event.wheelDelta){
+            //ie/chrome
+            //鼠标方向
+            if(event.wheelDelta > 0){
+                //上
+                flag = 'up';
+                add = -10;
+            }else{
+                //下
+                flag = 'down';
+                add = 10;
+            }
+        }else if(event.detail){
+            //firefox
+            //鼠标方向
+            if(event.detail<0){
+                //上
+                flag = 'up';
+                add = -10;
+            }else{
+                //下
+                flag = 'down';
+                add = 10;
+            }
+        }
+        //处理逻辑语句
+        //限定滚动条范围
+        var innerTop = slider.offsetTop + add;
+        if(innerTop<0){
+            innerTop = 0;
+        }else if(innerTop > wrap.offsetHeight-slider.offsetHeight){
+            innerTop =wrap.offsetHeight-slider.offsetHeight;
+        }
+        switch (flag){
+            case 'up':
+                //滚动条top减小
+                slider.style.top = innerTop+ 'px';
+                //内容区偏移量
+                //内容偏移量 = 滚动条的偏移量 / scale1
+                //内容区
+                content.style.top=-innerTop*scale+ 'px';
+                break;
+            case 'down':
+                //滚动条top增加
+                slider.style.top = innerTop + 'px';
+                content.style.top=-innerTop*scale+ 'px';
+                //内容区
+                break;
+        }
+        //取消系统默认行为
+        event.preventDefault && event.preventDefault();
+        return false;
+    }
+</script>
+
+</body>
+</html>
