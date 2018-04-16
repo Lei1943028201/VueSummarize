@@ -1,0 +1,76 @@
+{
+  "success": true,
+  "documentOperationData": {},
+  "attributeOperationData": {},
+  "cssOperationData": {
+    "title": [
+      {
+        "prop":"method",
+        "label": "方法"
+      },
+      {
+        "prop":"grammar",
+        "label":"语法"
+      },
+      {
+        "prop":"example",
+        "label":"实例"
+      },
+      {
+        "prop":"describe",
+        "label":"描述"
+      }
+    ],
+    "data": [
+      {
+        "method": "css()",
+        "grammar": "$(selector).css(name)",
+        "example": "$('p').css('color')",
+        "describe": "设置或返回匹配元素的样式属性。"
+      },
+      {
+        "method": "height()",
+        "grammar": "$(selector).height(length)",
+        "example": "$('p').height(50)",
+        "describe": "设置或返回匹配元素的高度。"
+      },
+      {
+        "method": "css()",
+        "grammar": "$(selector).css(name)",
+        "example": "$('p').css('color')",
+        "describe": "设置或返回匹配元素的样式属性。"
+      },
+      {
+        "method": "css()",
+        "grammar": "$(selector).css(name)",
+        "example": "$('p').css('color')",
+        "describe": "设置或返回匹配元素的样式属性。"
+      },
+      {
+        "method": "css()",
+        "grammar": "$(selector).css(name)",
+        "example": "$('p').css('color')",
+        "describe": "设置或返回匹配元素的样式属性。"
+      },
+      {
+        "method": "css()",
+        "grammar": "$(selector).css(name)",
+        "example": "$('p').css('color')",
+        "describe": "设置或返回匹配元素的样式属性。"
+      },
+      {
+        "method": "css()",
+        "grammar": "$(selector).css(name)",
+        "example": "$('p').css('color')",
+        "describe": "设置或返回匹配元素的样式属性。"
+      },
+      {
+        "method": "css()",
+        "grammar": "$(selector).css(name)",
+        "example": "$('p').css('color')",
+        "describe": "设置或返回匹配元素的样式属性。"
+      }
+
+    ]
+  }
+}
