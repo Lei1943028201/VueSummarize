@@ -61,12 +61,13 @@
         background: #eee
         &>h2
             text-align center
-            font-size 30px
-            line-height 50px
+            font-size 3rem
+            line-height 5rem
         &>.el-tabs
             width 99%
+            height 90%
             &>.el-tabs__header
-                margin-left 10px
+                margin-left 1rem
                 background: #fff
 
 </style>

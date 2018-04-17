@@ -1,17 +1,34 @@
-/**
- * Created by huayu on 2018/4/13.
- */
-createLocalStorage = (name, value) =>{
+/* Created by huayu on 2018/4/13.*/
+//localStorage操作
+function createLocalStorage(name, value){
     return localStorage.setItem(name, JSON.stringify(value))
 }
-RetrieveLocalStorage = (name) =>{
-    return localStorage.getItem(name)
+
+function retrieveLocalStorage(name){
+    return JSON.parse(localStorage.getItem(name))
 }
-deleteLocalStorage = (name) =>{
-    return localStorage.removeItem(name)
+function deleteLocalStorage(name){
+    return JSON.parse(localStorage.removeItem(name))
 }
+//sessionStorage操作
+function createSessionStorage(name, value){
+    return sessionStorage.setItem(name, JSON.stringify(value))
+}
+function retrieveSessionStorage(name){
+    return JSON.parse(sessionStorage.getItem(name))
+}
+function deleteSessionStorage(name){
+    return JSON.parse(sessionStorage.removeItem(name))
+}
+
+
+
+//暴露方法
 export default {
     createLocalStorage,
-    RetrieveLocalStorage,
-    deleteLocalStorage
+    retrieveLocalStorage,
+    deleteLocalStorage,
+    createSessionStorage,
+    retrieveSessionStorage,
+    deleteSessionStorage
 }

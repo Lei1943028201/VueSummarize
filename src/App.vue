@@ -1,7 +1,7 @@
 <template>
     <div id="fd-warp" >
         <fd-header v-show="$route.meta.showFooter"/>
-        <main ref="app">
+        <main>
             <router-view/>
         </main>
     </div>
@@ -14,12 +14,13 @@
                 'fd-header': header
             },
             mounted(){
-                console.log(this.$refs.app.clientHeight);
+
             }
     }
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
+
     html,body
         width 100%
         height 100%
@@ -33,6 +34,6 @@
         box-sizing border-box
         height 100%
         min-height 100%
-        padding-top 61.8px
+        padding-top 6rem
         background-image: linear-gradient(to top, #209cff 0%, #68e0cf 100%);
 </style>

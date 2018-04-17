@@ -40,15 +40,15 @@
     .jQuery-definition-and-characteristics-warp
         overflow auto
         width 99%
-        max-height 668px
+        max-height 66.8rem
         background: #ddd
         &>.box-card
-            margin 20px
+            margin 2rem
             .clearfix
-                font-size 18px
+                font-size 1.8rem
                 font-weight bold
             p
-                font-size 15px
-                line-height 23px
+                font-size 1.5rem
+                line-height 2.3rem
 
 </style>

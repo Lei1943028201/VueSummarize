@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 const Home = () => import('../pages/Home/Home')
 const jQuery = () => import('../pages/jQuery/jQuery')
+const ajax = () => import('../pages/AJAX/AJAX')
 Vue.use(VueRouter)
 
 export default new VueRouter({
@@ -25,6 +26,12 @@ export default new VueRouter({
                 showFooter: true
             }
         },
-
+        {
+            path: '/ajax',
+            component: ajax,
+            meta: {
+                showFooter: true
+            }
+        },
     ]
 })

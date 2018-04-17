@@ -3,6 +3,8 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import './mock/mockServer'
+import '../static/js/screenAdaptation'
+import {createLocalStorage} from '../static/js/global'
 //引入样式表
 import 'element-ui/lib/theme-chalk/index.css';
 import '../static/css/reset.css'

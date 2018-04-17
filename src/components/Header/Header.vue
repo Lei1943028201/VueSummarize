@@ -17,6 +17,7 @@
                     <el-menu-item index="css">CSS</el-menu-item>
                     <el-menu-item index="javaScript">JavaScript</el-menu-item>
                 </el-submenu>
+                <el-menu-item index="ajax">AJAX</el-menu-item>
             </el-submenu>
             <el-submenu index="2">
                 <template slot="title">前端框架</template>
@@ -88,9 +89,9 @@
         min-width 1366px
         z-index: 999
         &>.el-menu--horizontal>h1
-            margin-right 30px
+            margin-right 3rem
             float right
-            font-size 30px
+            font-size 3rem
             color #fff
-            line-height 61px
+            line-height 5rem
 </style>

@@ -43,6 +43,5 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
-    /*.el-table*/
-    /*height 280px*/
+
 </style>
