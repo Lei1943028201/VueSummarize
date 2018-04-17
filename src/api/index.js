@@ -5,7 +5,8 @@ import axios from 'axios'
 let isDebugger = true
 const localUrl = {
     jQuerySelectorData: "/api/jQuerySelectorData",
-    jQueryOperationMethodData: "/api/jQueryOperationMethodData"
+    jQueryOperationMethodData: "/api/jQueryOperationMethodData",
+    AJAXResponseStateCodeData: "/api/AJAXResponseStateCodeData"
 }
 const serverUrl = {
 
@@ -17,4 +18,7 @@ export function reqJQuerySelectorData() { // 返回是promise对象
 }
 export function reqJQueryOperationMethodData() { // 返回是promise对象
     return axios.get(url.jQueryOperationMethodData)
+}
+export function reqAJAXResponseStateCodeData() { // 返回是promise对象
+    return axios.get(url.AJAXResponseStateCodeData)
 }

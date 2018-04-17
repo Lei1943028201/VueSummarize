@@ -3,5 +3,6 @@
  */
 export default {
     jQuerySelectorData:{},
-    jQueryOperationMethodData: {}
+    jQueryOperationMethodData: {},
+    AJAXResponseStateCodeData: {}
 }

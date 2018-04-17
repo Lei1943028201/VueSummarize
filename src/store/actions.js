@@ -5,11 +5,13 @@ import {
     RESULT_OK,
     reqJQuerySelectorData,
     reqJQueryOperationMethodData,
+    reqAJAXResponseStateCodeData
 } from '../api'
 
 import {
     RECEIVE_JQUERYSELECTORDATA,
-    RECEIVE_JQUERYOPERATIONMETHODDATA
+    RECEIVE_JQUERYOPERATIONMETHODDATA,
+    RECEIVE_AJAXRESPONSESTATECODEDATA
 } from './mutation-types'
 
 export default {
@@ -38,6 +40,20 @@ export default {
                 const jQueryOperationMethodData = result.data
                 console.log('jQueryOperationMethodData', jQueryOperationMethodData);
                 commit(RECEIVE_JQUERYOPERATIONMETHODDATA, {jQueryOperationMethodData})
+            }
+        })
+    },
+
+    async getAJAXResponseStateCodeData({commit}) {
+        // 发送ajax请求, 获取seller数据
+        reqAJAXResponseStateCodeData().then(response => {
+            //获取返回的数据
+            const result = response.data
+            if(result.code===RESULT_OK) {
+                // 提交mutaion请求
+                const AJAXResponseStateCodeData = result.data
+                console.log('AJAXResponseStateCodeData', AJAXResponseStateCodeData);
+                commit(RECEIVE_AJAXRESPONSESTATECODEDATA, {AJAXResponseStateCodeData})
             }
         })
     },

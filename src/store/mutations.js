@@ -3,7 +3,8 @@
  */
 import {
     RECEIVE_JQUERYSELECTORDATA,
-    RECEIVE_JQUERYOPERATIONMETHODDATA
+    RECEIVE_JQUERYOPERATIONMETHODDATA,
+    RECEIVE_AJAXRESPONSESTATECODEDATA
 } from './mutation-types'
 
 export default {
@@ -16,5 +17,10 @@ export default {
     [RECEIVE_JQUERYOPERATIONMETHODDATA] (state, {jQueryOperationMethodData}) {
 
         state.jQueryOperationMethodData = jQueryOperationMethodData
+    },
+
+    [RECEIVE_AJAXRESPONSESTATECODEDATA] (state, {AJAXResponseStateCodeData}) {
+
+        state.AJAXResponseStateCodeData = AJAXResponseStateCodeData
     }
 }

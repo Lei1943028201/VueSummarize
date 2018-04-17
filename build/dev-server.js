@@ -38,6 +38,7 @@ var app = express()
 // 1. 加载json数据
 const jQuerySelectorData = require('../src/mock/jQuerySelectorData.json')
 const jQueryOperationMethodData = require('../src/mock/jQueryOperationMethodData.json')
+const AJAXResponseStateCodeData = require('../src/mock/AJAXResponseStateCodeData.json')
 // 2. 生成路由器
 const router = express.Router()
 // 3. 注册路由
@@ -54,7 +55,12 @@ router.get('/jQueryOperationMethodData', function (req, res, next) { // 处理�
         data: jQueryOperationMethodData
     })
 })
-
+router.get('/AJAXResponseStateCodeData', function (req, res, next) { // 处理请求, 返回响应数据
+    res.send({ // 返回给浏览器的是包含数据的对象
+        code: 200,  // 数据的标识属性   200代表正确的数据
+        data: AJAXResponseStateCodeData
+    })
+})
 
 // 4. 启用路由器
 app.use('/api', router)
